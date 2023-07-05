@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\input{glyphtounicode}
+
+
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+\DisableLigatures{encoding = *, family = * }
+\pdfgentounicode=1
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-4pt}}
+\newcommand{\resheading}[1]{
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-11pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\school}[4]{\vspace{1.5mm}
+  \textbf{#1} \hfill #2 \textit{#3} \hfill \textit{#4} \vspace{1.5mm}
+}
+
+\newcommand{\job}[4]{
+  \textbf{#1} \hfill #2 \hfill \textit{#3} \hfill \textit{#4}
+}
+
+\newcommand{\skill}[2]{
+  \textbf{#1} #2
+}
+
+\newcommand{\project}[4]{ \vspace{1.5mm}
+  \textbf{#1} #2 \hfill \textit{#3}#4 \vspace{1.5mm}
+}
+
+\newcommand{\award}[4]{ \vspace{1.5mm}
+  \textbf{#1} #2 \hfill \textit{#3} #4 \vspace{1.5mm}
+}
+%-----------------------------------------------------------
+    \begin{document}
+    
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\Large Jon Chen} \\ {sjchen@sjchen.com | 9086420812 | Los Angeles, CA | github.com/bsdlp}
+\end{tabular*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}[leftmargin=*]
+	\item[]
+	      \job
+	      {Twitch}
+	      {}
+	      {Software Engineer (Auth)}
+	      {February 2021 | March 2023}
+	      \begin{itemize}
+	      	\item Designed authentication service (written in Go) operating at over 1 million requests per second in AWS ECS
+	      	\item Led team of 6 engineers to execute on refactoring authentication service
+	      	\item Redefined how first party (GraphQL) and third party (OAuth2) applications authenticate to Twitch
+	      	\item Scaled up Twitch’s identity linking platform on AWS ECS for high throughput and high visibility partner events
+	      \end{itemize}
+	\item[]
+	      \job
+	      {Twitch}
+	      {}
+	      {Software Engineer (Identity)}
+	      {January 2020 | February 2021}
+	      \begin{itemize}
+	      	\item Worked on high priority action items resulting from security postmortems
+	      	\item Designed mass password reset pipeline used by incident response team
+	      \end{itemize}
+	\item[]
+	      \job
+	      {Twitch}
+	      {}
+	      {Software Engineer (Security)}
+	      {January 2017 | January 2020}
+	      \begin{itemize}
+	      	\item Tech lead on service to service auth product (Golang)
+	      	\item Tech lead on employee user auth service (Golang)
+	      	\item Major contributor to secrets management system (Golang, AWS)
+	      \end{itemize}
+	\item[]
+	      \job
+	      {Twitch}
+	      {}
+	      {Software Engineer (Systems Engineering)}
+	      {January 2015 | January 2017}
+	      \begin{itemize}
+	      	\item Migrated Twitch from bare metal to AWS
+	      \end{itemize}
+\end{itemize}
+
+
+
+
+\ 
+\end{document}
