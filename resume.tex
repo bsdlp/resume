@@ -12,6 +12,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage{hyperref}
 \input{glyphtounicode}
 
 
@@ -59,63 +60,48 @@
 
 \end{tabular*}\vspace{-6pt}}
 
-\newcommand{\school}[4]{\vspace{1.5mm}
-  \textbf{#1} \hfill #2 \textit{#3} \hfill \textit{#4} \vspace{1.5mm}
-}
-
 \newcommand{\job}[4]{
   \textbf{#1} \hfill #2 \hfill \textit{#3} \hfill \textit{#4}
 }
 
-\newcommand{\skill}[2]{
-  \textbf{#1} #2
-}
-
-\newcommand{\project}[4]{ \vspace{1.5mm}
-  \textbf{#1} #2 \hfill \textit{#3}#4 \vspace{1.5mm}
-}
-
-\newcommand{\award}[4]{ \vspace{1.5mm}
-  \textbf{#1} #2 \hfill \textit{#3} #4 \vspace{1.5mm}
-}
 %-----------------------------------------------------------
     \begin{document}
     
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-	\textbf{\Large Jon Chen} \\ {sjchen@sjchen.com | 9086420812 | Los Angeles, CA | github.com/bsdlp}
+	\textbf{\Large Jon Chen} & {sjchen@sjchen.com | 9086420812 | Los Angeles, CA | } \href{https://github.com/bsdlp}{github.com/bsdlp}
 \end{tabular*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Work Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*,itemsep=20pt]
 	\item[]
 	      \job
-	      {Twitch}
+	      {twitch.tv}
 	      {}
 	      {Software Engineer (Auth)}
-	      {February 2021 | March 2023}
+	      {February 2021 - March 2023}
 	      \begin{itemize}
-	      	\item Designed authentication service (written in Go) operating at over 1 million requests per second in AWS ECS
+	      	\item Designed authentication service (Golang) operating at over 1 million requests per second in aws ecs
 	      	\item Led team of 6 engineers to execute on refactoring authentication service
-	      	\item Redefined how first party (GraphQL) and third party (OAuth2) applications authenticate to Twitch
-	      	\item Scaled up Twitch’s identity linking platform on AWS ECS for high throughput and high visibility partner events
+	      	\item Redefined how 1st party (GraphQL) and 3rd party (OAuth2) apps authenticate to Twitch
+	      	\item Scaled up Twitch’s identity platform on aws ecs for high visibility partner events
 	      \end{itemize}
 	\item[]
 	      \job
-	      {Twitch}
+	      {twitch.tv}
 	      {}
 	      {Software Engineer (Identity)}
-	      {January 2020 | February 2021}
+	      {January 2020 - February 2021}
 	      \begin{itemize}
 	      	\item Worked on high priority action items resulting from security postmortems
 	      	\item Designed mass password reset pipeline used by incident response team
 	      \end{itemize}
 	\item[]
 	      \job
-	      {Twitch}
+	      {twitch.tv}
 	      {}
 	      {Software Engineer (Security)}
-	      {January 2017 | January 2020}
+	      {January 2017 - January 2020}
 	      \begin{itemize}
 	      	\item Tech lead on service to service auth product (Golang)
 	      	\item Tech lead on employee user auth service (Golang)
@@ -123,10 +109,10 @@
 	      \end{itemize}
 	\item[]
 	      \job
-	      {Twitch}
+	      {twitch.tv}
 	      {}
 	      {Software Engineer (Systems Engineering)}
-	      {January 2015 | January 2017}
+	      {January 2015 - January 2017}
 	      \begin{itemize}
 	      	\item Migrated Twitch from bare metal to AWS
 	      \end{itemize}
